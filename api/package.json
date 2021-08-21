@@ -1,0 +1,30 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "Api que irá disponibilizar os dados sobre lançamentos da API da SpaceX.",
+  "main": "./src",
+  "scripts": {
+    "test": "tsc && jest ./dist",
+    "start": "tsc && node ./dist/src/infra/http/express.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/felipebfernandes92/space-x.git"
+  },
+  "author": "Felipe de Bittencourt Fernandes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/felipebfernandes92/space-x/issues"
+  },
+  "homepage": "https://github.com/felipebfernandes92/space-x#readme",
+  "dependencies": {
+    "@types/jest": "^27.0.1",
+    "axios": "^0.21.1",
+    "date-fns": "^2.23.0",
+    "express": "^4.17.1",
+    "jest": "^27.0.6"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13"
+  }
+}
