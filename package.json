@@ -4,6 +4,9 @@
   "description": "Api que irá disponibilizar os dados sobre lançamentos da API da SpaceX.",
   "main": "./dist/src/infra/http/express.js",
   "scripts": {
+    "tsc": "./node_modules/typescript/bin/tsc",
+    "build": "tsc",
+    "postinstall": "npm run build",
     "test": "tsc && jest ./dist",
     "start": "tsc && node ./dist/src/infra/http/express.js"
   },
