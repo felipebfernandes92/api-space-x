@@ -1,5 +1,7 @@
 import GetNextLaunch from "../core/useCase/GetNextLaunch";
 import GetLatestLaunch from "../core/useCase/GetLatestLaunch";
+import GetUpcomingLaunches from "../core/useCase/GetUpcomingLaunches";
+import GetPastLaunches from "../core/useCase/GetPastLaunches";
 import LaunchRepositoryRestClient from "../infra/repository/LaunchRepositoryRestClient";
 
 export default class ParkingLotController {
@@ -15,5 +17,19 @@ export default class ParkingLotController {
         const getLatestLaunch = new GetLatestLaunch(launchRepositoryRestClient);
         let launch = await getLatestLaunch.execute();
         return launch;
+	}
+
+    static async getUpcomingLaunches () {
+		const launchRepositoryRestClient = new LaunchRepositoryRestClient();
+        const getUpcomingLaunches = new GetUpcomingLaunches(launchRepositoryRestClient);
+        let launches = await getUpcomingLaunches.execute();
+        return launches;
+	}
+
+    static async getPastLaunches () {
+		const launchRepositoryRestClient = new LaunchRepositoryRestClient();
+        const getPastLaunches = new GetPastLaunches(launchRepositoryRestClient);
+        let launches = await getPastLaunches.execute();
+        return launches;
 	}
 }

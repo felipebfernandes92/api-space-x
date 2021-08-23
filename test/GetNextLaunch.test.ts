@@ -1,4 +1,4 @@
-import { isFuture, isPast } from "date-fns";
+import { isFuture } from "date-fns";
 import GetNextLaunch from "../src/core/useCase/GetNextLaunch";
 import LaunchRepositoryRestClient from "../src/infra/repository/LaunchRepositoryRestClient";
 
