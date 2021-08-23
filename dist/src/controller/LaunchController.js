@@ -25,13 +25,13 @@ class ParkingLotController {
         const launchRepositoryRestClient = new LaunchRepositoryRestClient_1.default();
         const getUpcomingLaunches = new GetUpcomingLaunches_1.default(launchRepositoryRestClient);
         let launches = await getUpcomingLaunches.execute();
-        return launches;
+        return launches.slice(0, 5);
     }
     static async getPastLaunches() {
         const launchRepositoryRestClient = new LaunchRepositoryRestClient_1.default();
         const getPastLaunches = new GetPastLaunches_1.default(launchRepositoryRestClient);
         let launches = await getPastLaunches.execute();
-        return launches;
+        return launches.reverse().slice(0, 5);
     }
 }
 exports.default = ParkingLotController;

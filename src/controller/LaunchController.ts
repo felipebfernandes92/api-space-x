@@ -23,13 +23,13 @@ export default class ParkingLotController {
 		const launchRepositoryRestClient = new LaunchRepositoryRestClient();
         const getUpcomingLaunches = new GetUpcomingLaunches(launchRepositoryRestClient);
         let launches = await getUpcomingLaunches.execute();
-        return launches;
+        return launches.slice(0, 5);
 	}
 
     static async getPastLaunches () {
 		const launchRepositoryRestClient = new LaunchRepositoryRestClient();
         const getPastLaunches = new GetPastLaunches(launchRepositoryRestClient);
         let launches = await getPastLaunches.execute();
-        return launches;
+        return launches.reverse().slice(0, 5);
 	}
 }
