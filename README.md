@@ -22,7 +22,7 @@ Foram ultilizados os padrões de Clean Arquitecture e TDD.
 Partiu-se do principio de isolar a camada de negócio dos componentes externos.
 Exemplo: Se a API do Space X mudar, basta alterar o arquivo **LaunchRepositoryRestClient**, que é uma implementação do **LaunchRepository**.
 
-## :building_construction: Testes
+## :ballot_box_with_check: Testes
 ```bash
 $ npm install
 $ npm test
