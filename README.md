@@ -15,7 +15,7 @@ $ npm install
 $ npm start
 ```
 
-Acesso: http://localhost:8080.
+Acesso pela URL: http://localhost:8080.
 
 ## :building_construction: Arquitetura e design
 Foram ultilizados os padrões de Clean Arquitecture e TDD.
